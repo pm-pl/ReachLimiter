@@ -5,4 +5,5 @@ branches:
 projects:
   ReachLimiter:
     path: ""
+    icon: Icon.png
 ...
