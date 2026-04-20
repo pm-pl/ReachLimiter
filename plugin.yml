@@ -1,6 +1,14 @@
 name: ReachLimiter
 api: 5.0.0
-version: 1.0.0
+version: 1.1.0
 author: Jorgebyte
 
 main: Jorgebyte\ReachLimiter\Main
+
+permissions:
+  reachlimiter.bypass:
+    default: op
+    description: "Bypass all ReachLimiter checks"
+  reachlimiter.notify:
+    default: op
+    description: "Receive ReachLimiter staff notifications"

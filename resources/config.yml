@@ -1,1 +1,27 @@
+# Legacy key kept for backward compatibility with older versions.
 max-reach: 3.85
+
+checks:
+  # Base melee reach before ping/buffer calculation.
+  max-reach: 3.15
+  # Extra tolerance to avoid false positives.
+  extra-buffer: 0.45
+  # Ignore reach check when attacker ping is above this value (0 disables this behavior).
+  max-ping-ignore-check: 220
+  # Extra allowed reach added per 100ms ping blocks.
+  ping-buffer-per-100ms: 0.10
+
+# Empty list means all worlds are valid.
+worlds: []
+
+notify:
+  player:
+    enabled: true
+    cooldown: 1.2
+    message: "§cHit cancelled for long reach. Distance: %distance%m / Allowed: %allowed%m"
+  staff:
+    enabled: true
+    cooldown: 0.8
+    message: "§e[ReachLimiter] %player% -> %target% (%distance%m > %allowed%m, ping=%ping%, world=%world%)"
+
+log-violations: false
