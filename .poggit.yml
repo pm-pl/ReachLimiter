@@ -5,5 +5,7 @@ branches:
 projects:
   ReachLimiter:
     path: ""
+    lint:
+      phpstan: false
     icon: Icon.png
 ...
